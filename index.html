@@ -1,22 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+      
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      h1, h2, h3, h4, h5, h6, p, body{
+        margin: 0;
+      }
+
+      .cover{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color:  hsl(233, 47%, 7%);
+      }
+
+      .container{
+        width: 80%;
+        height: 65%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 10px;
+        background-color: hsl(244, 38%, 16%);
+        font-family: 'Inter', sans-serif;
+        overflow: hidden;
+        font-size: 15px;
+      }
+
+      .main-img{
+        background-image: url('./images/image-header-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .main-content{
+        padding: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 175px;
+      }
+
+      .metrics{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .wht-txt{
+        color: white;
+      }
+
+      .sft-vilt{
+        color: hsl(277, 64%, 61%);
+      }
+
+      .swht-txt1{
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+
+      .swht-txt2{
+        color: hsla(0, 0%, 100%, 0.6);
+      }
+
+      .fnt-fml1{
+        font-family: 'Inter', sans-serif;
+      }
+
+      .fnt-fml2{
+        font-family: 'Lexend Deca', sans-serif;
+      }
+
+      .main-heading{
+        font-size: 38px;
+        margin-bottom: 28px;
+      }
+
+      .main-para{
+        font-size: 16px;
+        line-height: 1.7em;
+      }
+
+      .metrics-nums{
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .metrics-small{
+        text-transform: uppercase;
+        margin-top: 2px;
+      }
+
+      .layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsla(277, 71%, 25%, 0.7);
+      }
+
+      @media screen and (max-width: 375px) {
+        .container{
+          width: 350px;
+          height: unset;
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        .main-img{
+          background-image: url('./images/image-header-mobile.jpg');
+          height: 250px;
+        }
+        .main-content{
+          padding: 30px;
+          align-items: center;
+          text-align: center;
+          gap: 35px;
+        }
+        .metrics{
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+        .main-heading{
+          font-size: 28px;
+          margin-bottom: 28px;
+        }
   
-  <title>Frontend Mentor | Stats preview card component</title>
+        .main-para{
+          font-size: 16px;
+          line-height: 1.7em;
+        }
+  
+        .metrics-nums{
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
 
-  <!-- Get insights that help your business grow.
+    </style>
+  </head>
+  <body>
+    <!-- Get insights that help your business grow.
 
   Discover the benefits of data analytics and make better decisions regarding revenue, customer 
   experience, and overall efficiency.
@@ -30,7 +183,32 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <!-- ui code -->
-  
-</body>
+    <!-- ui code -->
+    <main class="cover">
+      <div class="container">
+        <article class="main-content">
+          <div>
+            <h1 class="wht-txt main-heading">Get <span class="sft-vilt">insights</span> that help your business grow.</h1>
+            <p class="swht-txt1 main-para">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+              experience, and overall efficiency.</p>
+          </div>
+          <div class="metrics">
+            <div>
+              <p class="metrics-nums wht-txt">10k+</p>
+              <p class="metrics-small swht-txt2">companies</p>
+            </div>
+            <div>
+              <p class="metrics-nums wht-txt">314</p>
+              <p class="metrics-small swht-txt2">templates</p>
+            </div>
+            <div>
+              <p class="metrics-nums wht-txt">12m+</p>
+              <p class="metrics-small swht-txt2">queries</p>
+            </div>
+          </div>
+        </article>        
+        <aside class="main-img"><div class="layer"></div></aside>
+      </div>
+    </main>
+  </body>
 </html>
